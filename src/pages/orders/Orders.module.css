@@ -1,0 +1,48 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.toolbar > * {
+  flex: 1 1 12rem;
+  max-width: 16rem;
+}
+
+.toolbar > .search {
+  flex-basis: 16rem;
+  max-width: 22rem;
+}
+
+.count {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.grid {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.row {
+  cursor: pointer;
+}
+
+.centerCell {
+  display: flex;
+  align-items: center;
+}
+
+.overdue {
+  color: var(--theme-color-alarm-text);
+  font-weight: 700;
+}
+
+@media (max-width: 40rem) {
+  .toolbar > *,
+  .toolbar > .search {
+    max-width: none;
+  }
+}

@@ -1,0 +1,66 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 72rem) {
+  .layout {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .layout > :first-child {
+    grid-row: span 2;
+  }
+}
+
+.card {
+  width: 100%;
+  height: auto;
+}
+
+/* ix-card-content aligns children to the start; let them use the full width. */
+.cardBody > * {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.hint {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.units {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--theme-color-soft-bdr);
+}
+
+.units > ix-number-input {
+  flex: 0 1 16rem;
+}
+
+.units > ix-button {
+  margin-top: 1.5rem;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.25rem 0;
+}
+
+.historyItem time {
+  color: var(--theme-color-soft-text);
+}
