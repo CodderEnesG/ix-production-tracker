@@ -1,0 +1,42 @@
+{
+  "name": "ix-production-tracker",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"tsx watch server/dev.ts\" \"vite\"",
+    "dev:web": "vite",
+    "dev:api": "tsx watch server/dev.ts",
+    "typecheck": "tsc -b",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.5",
+    "@siemens/ix": "^5.2.1",
+    "@siemens/ix-aggrid": "^5.1.0",
+    "@siemens/ix-echarts": "^4.1.1",
+    "@siemens/ix-icons": "^3.5.0",
+    "@siemens/ix-react": "^5.2.1",
+    "ag-grid-community": "^33.0.0",
+    "ag-grid-react": "^33.0.0",
+    "echarts": "^5",
+    "hono": "^4.13.13",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.17.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^9.2.0",
+    "tsx": "^4.20.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.8"
+  }
+}
